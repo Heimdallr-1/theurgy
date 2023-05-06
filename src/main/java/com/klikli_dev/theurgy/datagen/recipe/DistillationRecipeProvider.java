@@ -10,9 +10,11 @@ import com.google.gson.JsonObject;
 import com.klikli_dev.theurgy.Theurgy;
 import com.klikli_dev.theurgy.content.recipe.DistillationRecipe;
 import com.klikli_dev.theurgy.registry.ItemRegistry;
+import com.klikli_dev.theurgy.registry.ItemTagRegistry;
 import com.klikli_dev.theurgy.registry.RecipeTypeRegistry;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.common.Tags;
@@ -31,6 +33,15 @@ public class DistillationRecipeProvider extends JsonRecipeProvider {
     @Override
     void buildRecipes(BiConsumer<ResourceLocation, JsonObject> recipeConsumer) {
         this.makeMercuryShardRecipe(1, Tags.Items.STONE, 10);
+        this.makeMercuryShardRecipe(1, ItemTags.DIRT, 25);
+
+        this.makeMercuryShardRecipe(5, ItemTagRegistry.LOW_MERCURY_ORES, 1);
+        this.makeMercuryShardRecipe(25, ItemTagRegistry.MEDIUM_MERCURY_ORES, 1);
+        this.makeMercuryShardRecipe(50, ItemTagRegistry.HIGH_MERCURY_ORES, 1);
+
+        this.makeMercuryShardRecipe(1, ItemTagRegistry.LOW_MERCURY_RAW_MATERIALS, 1);
+        this.makeMercuryShardRecipe(5, ItemTagRegistry.MEDIUM_MERCURY_RAW_MATERIALS, 1);
+        this.makeMercuryShardRecipe(10, ItemTagRegistry.HIGH_MERCURY_RAW_MATERIALS, 1);
     }
 
     public void makeMercuryShardRecipe(int resultCount, TagKey<Item> ingredient, int ingredientCount) {

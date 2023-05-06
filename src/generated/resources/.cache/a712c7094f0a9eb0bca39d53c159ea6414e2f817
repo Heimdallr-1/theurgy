@@ -1,9 +1,9 @@
-// 1.19.4	2023-05-06T14:42:11.9222643	Liquefaction Recipes
+// 1.19.4	2023-05-06T16:34:31.4683337	Liquefaction Recipes
 947a3e1720d6a7e40c0b8736ae278e47bada5db2 data/theurgy/recipes/liquefaction/allthemodium_ore.json
 c374708cf1f01b50bf54c5810df7a79e48976916 data/theurgy/recipes/liquefaction/allthemodium_raw.json
 bafe8d512e9954b4d62acd6bbc5e12ed4815b7ed data/theurgy/recipes/liquefaction/apatite_ore.json
 f930677f1620497ca97044635c94495fe343f310 data/theurgy/recipes/liquefaction/azure_silver_ore.json
-6e6007c47381c93a5a3f5cc69f0942c2feeed658 data/theurgy/recipes/liquefaction/azure_silver_raw.json
+6cb06cae1e8bc831e637eabf56d1265c7a221bbd data/theurgy/recipes/liquefaction/azure_silver_raw.json
 fec796900472689b46b73fa4a27b594fdd82fc3f data/theurgy/recipes/liquefaction/cinnabar_ore.json
 8fb0a124b89ae2d07deb55b7b04430c7411fc0b8 data/theurgy/recipes/liquefaction/cinnabar_raw.json
 76fdda1ea323287a8ed588665d6c28bbfd8ab1d1 data/theurgy/recipes/liquefaction/coal_ore.json

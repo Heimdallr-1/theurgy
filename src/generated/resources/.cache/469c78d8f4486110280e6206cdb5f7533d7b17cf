@@ -1,6 +1,12 @@
-// 1.19.4	2023-05-06T14:59:48.5825767	Tags for minecraft:item mod id theurgy
+// 1.19.4	2023-05-06T16:34:31.4703351	Tags for minecraft:item mod id theurgy
 7a78325a639e879280cccf4d15f364e02da86003 data/forge/tags/items/gems.json
 9a414088a384ea8077655b79eb53ac263aaae5e3 data/forge/tags/items/gems/sal_ammoniac.json
+b119b915f2e2b16c4a5750a50453a2cfddf7235f data/forge/tags/items/high_mercury_ores.json
+ca75039df5ed6330ee575eb55689e8f23a1e7a99 data/forge/tags/items/high_mercury_raw_materials.json
+f844cd452a39f1295f45a4cb9585a1510a719986 data/forge/tags/items/low_mercury_ores.json
+ba40677f5ca89c0a487417a60d1bb1fc6e20b837 data/forge/tags/items/low_mercury_raw_materials.json
+201dcad9991b37cbbe3388aafec4048eebaae020 data/forge/tags/items/medium_mercury_ores.json
+6c46417f3830c1411e097320c5d40fcee9cf28a7 data/forge/tags/items/medium_mercury_raw_materials.json
 04abd356cb9b230f4d1adcf90db05571e8a17d05 data/forge/tags/items/ores/sal_ammoniac.json
 9148832ee4e83df2b37e23918707fd8046f26ff7 data/forge/tags/items/ores_in_ground/deepslate.json
 f8295983ffdb0c42c6c8b12788a5b63c1eb43f72 data/forge/tags/items/ores_in_ground/stone.json

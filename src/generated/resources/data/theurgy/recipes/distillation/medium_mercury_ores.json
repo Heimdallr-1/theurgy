@@ -1,0 +1,12 @@
+{
+  "type": "theurgy:distillation",
+  "distillation_time": 200,
+  "ingredient": {
+    "tag": "forge:medium_mercury_ores"
+  },
+  "ingredient_count": 1,
+  "result": {
+    "count": 25,
+    "item": "theurgy:mercury_shard"
+  }
+}

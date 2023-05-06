@@ -11,7 +11,7 @@ import com.klikli_dev.theurgy.registry.*;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
-import net.minecraft.data.tags.TagsProvider;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -50,5 +50,79 @@ public class TheurgyItemTagsProvider extends ItemTagsProvider {
         SulfurRegistry.SULFURS.getEntries().forEach(sulfur -> {
             sulfurTag.add(sulfur.get());
         });
+
+        this.tag(ItemTagRegistry.LOW_MERCURY_ORES)
+                .addTag(Tags.Items.ORES_IRON)
+                .addTag(Tags.Items.ORES_COPPER)
+                .addTag(Tags.Items.ORES_LAPIS)
+                .addTag(Tags.Items.ORES_QUARTZ)
+                .addTag(Tags.Items.ORES_REDSTONE)
+                .addTag(Tags.Items.ORES_COAL)
+                .addOptionalTag(this.rl("forge:ores/zinc"))
+                .addOptionalTag(this.rl("forge:ores/osmium"))
+                .addOptionalTag(this.rl("forge:ores/nickel"))
+                .addOptionalTag(this.rl("forge:ores/lead"))
+                .addOptionalTag(this.rl("forge:ores/tin"))
+                .addOptionalTag(this.rl("forge:ores/cinnabar"))
+                .addOptionalTag(this.rl("forge:ores/apatite"))
+                .addOptionalTag(this.rl("forge:ores/sulfur"))
+        ;
+
+        this.tag(ItemTagRegistry.MEDIUM_MERCURY_ORES)
+                .addTag(Tags.Items.ORES_GOLD)
+                .addOptionalTag(this.rl("forge:ores/azure_silver"))
+                .addOptionalTag(this.rl("forge:ores/silver"))
+                .addOptionalTag(this.rl("forge:ores/uranium"))
+                .addOptionalTag(this.rl("forge:ores/iridium"))
+                .addOptionalTag(this.rl("forge:ores/platinum"))
+                .addOptionalTag(this.rl("forge:ores/crimson_iron"))
+                .addOptionalTag(this.rl("forge:ores/ruby"))
+                .addOptionalTag(this.rl("forge:ores/peridot"))
+                .addOptionalTag(this.rl("forge:ores/fluorite"))
+                .addOptionalTag(this.rl("forge:ores/sapphire"))
+        ;
+
+        this.tag(ItemTagRegistry.HIGH_MERCURY_ORES)
+                .addTag(Tags.Items.ORES_DIAMOND)
+                .addTag(Tags.Items.ORES_EMERALD)
+                .addTag(Tags.Items.ORES_NETHERITE_SCRAP)
+                .addOptionalTag(this.rl("forge:ores/allthemodium"))
+                .addOptionalTag(this.rl("forge:ores/unobtainium"))
+                .addOptionalTag(this.rl("forge:ores/vibranium"))
+
+        ;
+
+        this.tag(ItemTagRegistry.LOW_MERCURY_RAW_MATERIALS)
+                .addTag(Tags.Items.RAW_MATERIALS_IRON)
+                .addTag(Tags.Items.RAW_MATERIALS_COPPER)
+                .addOptionalTag(this.rl("forge:raw_materials/zinc"))
+                .addOptionalTag(this.rl("forge:raw_materials/osmium"))
+                .addOptionalTag(this.rl("forge:raw_materials/nickel"))
+                .addOptionalTag(this.rl("forge:raw_materials/lead"))
+                .addOptionalTag(this.rl("forge:raw_materials/tin"))
+                .addOptionalTag(this.rl("forge:raw_materials/cinnabar"))
+
+        ;
+
+        this.tag(ItemTagRegistry.MEDIUM_MERCURY_RAW_MATERIALS)
+                .addTag(Tags.Items.RAW_MATERIALS_GOLD)
+                .addOptionalTag(this.rl("forge:raw_materials/uranium"))
+                .addOptionalTag(this.rl("forge:raw_materials/silver"))
+                .addOptionalTag(this.rl("forge:raw_materials/azure_silver"))
+                .addOptionalTag(this.rl("forge:raw_materials/iridium"))
+                .addOptionalTag(this.rl("forge:raw_materials/crimson_iron"))
+                .addOptionalTag(this.rl("forge:raw_materials/platinum"))
+        ;
+
+        this.tag(ItemTagRegistry.HIGH_MERCURY_RAW_MATERIALS)
+                .addOptionalTag(this.rl("forge:raw_materials/allthemodium"))
+                .addOptionalTag(this.rl("forge:raw_materials/unobtainium"))
+                .addOptionalTag(this.rl("forge:raw_materials/vibranium"))
+
+        ;
+    }
+
+    public ResourceLocation rl(String tag) {
+        return new ResourceLocation(tag);
     }
 }

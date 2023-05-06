@@ -23,6 +23,13 @@ public class ItemTagRegistry {
     public static final TagKey<Item> SAL_AMMONIAC_GEMS = forgeTag( "gems/sal_ammoniac");
     public static final TagKey<Item> SAL_AMMONIAC_ORES = forgeTag( "ores/sal_ammoniac");
 
+    public static final TagKey<Item> LOW_MERCURY_ORES = forgeTag( "low_mercury_ores");
+    public static final TagKey<Item> MEDIUM_MERCURY_ORES = forgeTag( "medium_mercury_ores");
+    public static final TagKey<Item> HIGH_MERCURY_ORES = forgeTag( "high_mercury_ores");
+
+    public static final TagKey<Item> LOW_MERCURY_RAW_MATERIALS = forgeTag( "low_mercury_raw_materials");
+    public static final TagKey<Item> MEDIUM_MERCURY_RAW_MATERIALS = forgeTag( "medium_mercury_raw_materials");
+    public static final TagKey<Item> HIGH_MERCURY_RAW_MATERIALS = forgeTag( "high_mercury_raw_materials");
 
     public static TagKey<Item> tag(String id) {
         return tag(Theurgy.loc(id));

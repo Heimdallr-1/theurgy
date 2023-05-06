@@ -1,2 +1,9 @@
-// 1.19.4	2023-04-13T13:48:43.6109996	Distillation Recipes
+// 1.19.4	2023-05-06T16:34:31.4713346	Distillation Recipes
+ef16251845fbe8d9143b2be6c27b87ffa49f2221 data/theurgy/recipes/distillation/dirt.json
+3f59b05c5bd3203d1591c44e6bd6fed5c3146eb3 data/theurgy/recipes/distillation/high_mercury_ores.json
+12f8ed87923a0817c9ad04df57c1619f727f7beb data/theurgy/recipes/distillation/high_mercury_raw_materials.json
+e1b66872297da2ecb2fc3973ecb79bdb9b0a7b92 data/theurgy/recipes/distillation/low_mercury_ores.json
+7a9968eaadc917d5bf1920337ec44bf81c472733 data/theurgy/recipes/distillation/low_mercury_raw_materials.json
+ae3df8a22783bd3b47be9108475c7df921342809 data/theurgy/recipes/distillation/medium_mercury_ores.json
+e01256f3d81088259f1d9ed2cec3f73d1495eca0 data/theurgy/recipes/distillation/medium_mercury_raw_materials.json
 6358fdfc73719c71068b51e96aa2e5b39cf1b8c8 data/theurgy/recipes/distillation/stone.json
