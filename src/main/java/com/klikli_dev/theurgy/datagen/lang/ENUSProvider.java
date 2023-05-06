@@ -221,6 +221,7 @@ public class ENUSProvider extends LanguageProvider implements TooltipLanguagePro
     private void addSalts() {
         //Salt source names used in automatic name rendering
         this.addSaltSource(SaltRegistry.ORE, "Ores");
+        this.addSaltSource(SaltRegistry.INGOT, "Ingots");
         this.addSaltSource(SaltRegistry.CROPS, "Crops");
 
         //Automatic salt name rendering

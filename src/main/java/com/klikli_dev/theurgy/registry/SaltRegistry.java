@@ -23,6 +23,9 @@ public class SaltRegistry {
     public static final RegistryObject<AlchemicalSaltItem> ORE =
             register("ore");
 
+    public static final RegistryObject<AlchemicalSaltItem> INGOT =
+            register("ingot");
+
     public static final RegistryObject<AlchemicalSaltItem> CROPS =
             register("crops");
 

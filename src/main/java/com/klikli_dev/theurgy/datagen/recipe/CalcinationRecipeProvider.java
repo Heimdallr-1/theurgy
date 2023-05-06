@@ -30,6 +30,7 @@ public class CalcinationRecipeProvider extends JsonRecipeProvider {
     @Override
     void buildRecipes(BiConsumer<ResourceLocation, JsonObject> recipeConsumer) {
         this.makeRecipe(SaltRegistry.ORE.get(), Tags.Items.ORES);
+        this.makeRecipe(SaltRegistry.INGOT.get(), Tags.Items.INGOTS);
         this.makeRecipe(SaltRegistry.CROPS.get(), Tags.Items.CROPS);
     }
 
