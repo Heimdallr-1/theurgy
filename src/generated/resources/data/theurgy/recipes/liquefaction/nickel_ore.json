@@ -5,19 +5,19 @@
       "type": "forge:not",
       "value": {
         "type": "forge:tag_empty",
-        "tag": "minecraft:logs"
+        "tag": "forge:ores/nickel"
       }
     }
   ],
   "ingredient": {
-    "tag": "minecraft:logs"
+    "tag": "forge:ores/nickel"
   },
   "liquefaction_time": 200,
   "result": {
     "count": 1,
-    "item": "theurgy:alchemical_sulfur_logs",
+    "item": "theurgy:alchemical_sulfur_nickel_ore",
     "nbt": {
-      "theurgy:sulfur.source.id": "#minecraft:logs"
+      "theurgy:sulfur.source.id": "#forge:ores/nickel"
     }
   },
   "solvent": {

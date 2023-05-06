@@ -5,23 +5,23 @@
       "type": "forge:not",
       "value": {
         "type": "forge:tag_empty",
-        "tag": "minecraft:logs"
+        "tag": "forge:ores/sapphire"
       }
     }
   ],
   "ingredient": {
-    "tag": "minecraft:logs"
+    "tag": "forge:ores/sapphire"
   },
   "liquefaction_time": 200,
   "result": {
     "count": 1,
-    "item": "theurgy:alchemical_sulfur_logs",
+    "item": "theurgy:alchemical_sulfur_sapphire_ore",
     "nbt": {
-      "theurgy:sulfur.source.id": "#minecraft:logs"
+      "theurgy:sulfur.source.id": "#forge:ores/sapphire"
     }
   },
   "solvent": {
-    "amount": 10,
+    "amount": 15,
     "fluid": "theurgy:sal_ammoniac"
   }
 }

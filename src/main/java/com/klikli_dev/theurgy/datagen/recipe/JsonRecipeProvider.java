@@ -73,6 +73,9 @@ public abstract class JsonRecipeProvider implements DataProvider {
         return BuiltInRegistries.FLUID.getKey(fluid);
     }
 
+    public TagKey<Item> tag(String tag) {
+        return this.tag(new ResourceLocation(tag));
+    }
     public TagKey<Item> tag(ResourceLocation tag) {
         return TagKey.create(Registries.ITEM, tag);
     }
