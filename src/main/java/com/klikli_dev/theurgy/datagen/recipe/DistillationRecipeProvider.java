@@ -6,6 +6,7 @@
 
 package com.klikli_dev.theurgy.datagen.recipe;
 
+import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.klikli_dev.theurgy.Theurgy;
 import com.klikli_dev.theurgy.content.recipe.DistillationRecipe;
@@ -54,12 +55,19 @@ public class DistillationRecipeProvider extends JsonRecipeProvider {
 
     public void makeMercuryShardRecipe(String recipeName, int resultCount, TagKey<Item> ingredient, int ingredientCount, int distillationTime) {
 
+        var recipe = this.makeRecipeJson(
+                this.makeTagIngredient(ingredient.location()),
+                ingredientCount,
+                this.makeItemResult(this.locFor(ItemRegistry.MERCURY_SHARD.get()), resultCount), distillationTime);
+
+        var conditions = new JsonArray();
+        conditions.add(this.makeTagNotEmptyCondition(ingredient.location().toString()));
+        recipe.add("conditions", conditions);
+
         this.recipeConsumer.accept(
                 this.modLoc(recipeName),
-                this.makeRecipeJson(
-                        this.makeTagIngredient(ingredient.location()),
-                        ingredientCount,
-                        this.makeItemResult(this.locFor(ItemRegistry.MERCURY_SHARD.get()), resultCount), distillationTime));
+                recipe
+        );
 
     }
 

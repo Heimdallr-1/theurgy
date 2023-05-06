@@ -158,6 +158,7 @@ public class LiquefactionRecipeProvider extends JsonRecipeProvider {
                 this.makeTagIngredient(ingredient.location()),
                 this.makeFluidIngredient(this.locFor(solvent), solventAmount),
                 this.makeItemResult(this.modLoc("alchemical_sulfur_" + sulfurName), resultCount, nbt), liquefactionTime);
+
         var conditions = new JsonArray();
         conditions.add(this.makeTagNotEmptyCondition(ingredient.location().toString()));
         recipe.add("conditions", conditions);
@@ -190,16 +191,6 @@ public class LiquefactionRecipeProvider extends JsonRecipeProvider {
         recipe.add("result", result);
         recipe.addProperty("liquefaction_time", liquefactionTime);
         return recipe;
-    }
-
-    public JsonObject makeTagNotEmptyCondition(String tag) {
-        var condition = new JsonObject();
-        condition.addProperty("type", "forge:not");
-        var value = new JsonObject();
-        value.addProperty("type", "forge:tag_empty");
-        value.addProperty("tag", tag);
-        condition.add("value", value);
-        return condition;
     }
 
     @Override
