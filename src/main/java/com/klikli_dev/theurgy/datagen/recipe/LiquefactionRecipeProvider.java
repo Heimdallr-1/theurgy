@@ -82,7 +82,7 @@ public class LiquefactionRecipeProvider extends JsonRecipeProvider {
         this.makeRecipe(this.ore("sulfur"), 6, this.tag("forge:ores/sulfur"), salAmmoniac, 10);
 
         //Common Raw Materials Sulfurs
-        this.makeRecipe("iron", 2, Tags.Items.RAW_MATERIALS_IRON, salAmmoniac, 10);
+        this.makeRecipe(this.raw("iron"), 2, Tags.Items.RAW_MATERIALS_IRON, salAmmoniac, 10);
         this.makeRecipe(this.raw("copper"), 2, Tags.Items.RAW_MATERIALS_COPPER, salAmmoniac, 10);
         this.makeRecipe(this.raw("gold"), 2, Tags.Items.RAW_MATERIALS_GOLD, salAmmoniac, 15);
         this.makeRecipe(this.raw("netherite"), 2, Tags.Items.ORES_NETHERITE_SCRAP, salAmmoniac, 100);
