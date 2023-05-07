@@ -6,6 +6,7 @@
 
 package com.klikli_dev.theurgy.datagen.recipe;
 
+import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.klikli_dev.theurgy.Theurgy;
 import com.klikli_dev.theurgy.content.item.AlchemicalSaltItem;
@@ -20,6 +21,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraftforge.common.Tags;
 
 import java.util.function.BiConsumer;
 
@@ -34,6 +36,8 @@ public class IncubationRecipeProvider extends JsonRecipeProvider {
     @Override
     void buildRecipes(BiConsumer<ResourceLocation, JsonObject> recipeConsumer) {
         this.makeRecipe(Items.WHEAT, ItemRegistry.MERCURY_SHARD.get(), SaltRegistry.CROPS.get(), SulfurRegistry.WHEAT.get());
+
+        this.makeRecipe(Tags.Items.ORES_IRON, ItemRegistry.MERCURY_SHARD.get(), SaltRegistry.MINERAL.get(), SulfurRegistry.IRON_ORE.get());
     }
 
     public void makeRecipe(TagKey<Item> result, Item mercury, AlchemicalSaltItem salt, AlchemicalSulfurItem sulfur) {
@@ -53,14 +57,21 @@ public class IncubationRecipeProvider extends JsonRecipeProvider {
     }
 
     public void makeRecipe(String recipeName, TagKey<Item> result, int resultCount, Item mercury, AlchemicalSaltItem salt, AlchemicalSulfurItem sulfur, int incubationTime) {
+
+        var recipe = this.makeRecipeJson(
+                this.makeItemIngredient(this.locFor(mercury)),
+                this.makeItemIngredient(this.locFor(salt)),
+                this.makeItemIngredient(this.locFor(sulfur)),
+                this.makeTagResult(this.locFor(result), resultCount), incubationTime);
+
+        var conditions = new JsonArray();
+        conditions.add(this.makeTagNotEmptyCondition(result.location().toString()));
+        recipe.add("conditions", conditions);
+
         this.recipeConsumer.accept(
                 this.modLoc(recipeName),
-                this.makeRecipeJson(
-                        this.makeItemIngredient(this.locFor(mercury)),
-                        this.makeItemIngredient(this.locFor(salt)),
-                        this.makeItemIngredient(this.locFor(sulfur)),
-                        this.makeTagResult(this.locFor(result), resultCount), incubationTime));
-
+                recipe
+        );
     }
 
     public void makeRecipe(Item result, Item mercury, AlchemicalSaltItem salt, AlchemicalSulfurItem sulfur) {
