@@ -6,16 +6,16 @@
       "type": "forge:not",
       "value": {
         "type": "forge:tag_empty",
-        "tag": "forge:ores"
+        "tag": "forge:stone"
       }
     }
   ],
   "ingredient": {
-    "tag": "forge:ores"
+    "tag": "forge:stone"
   },
   "ingredient_count": 1,
   "result": {
     "count": 1,
-    "item": "theurgy:alchemical_salt_mineral"
+    "item": "theurgy:alchemical_salt_strata"
   }
 }

@@ -6,12 +6,12 @@
       "type": "forge:not",
       "value": {
         "type": "forge:tag_empty",
-        "tag": "forge:ores"
+        "tag": "forge:raw_materials"
       }
     }
   ],
   "ingredient": {
-    "tag": "forge:ores"
+    "tag": "forge:raw_materials"
   },
   "ingredient_count": 1,
   "result": {

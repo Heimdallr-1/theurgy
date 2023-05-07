@@ -14,8 +14,10 @@ import com.klikli_dev.theurgy.registry.RecipeTypeRegistry;
 import com.klikli_dev.theurgy.registry.SaltRegistry;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.common.Tags;
 
 import java.util.function.BiConsumer;
@@ -30,7 +32,16 @@ public class CalcinationRecipeProvider extends JsonRecipeProvider {
 
     @Override
     void buildRecipes(BiConsumer<ResourceLocation, JsonObject> recipeConsumer) {
+        this.makeRecipe(SaltRegistry.STRATA.get(), "from_stone", Tags.Items.STONE);
+        this.makeRecipe(SaltRegistry.STRATA.get(), "from_sandstone", Tags.Items.SANDSTONE);
+        this.makeRecipe(SaltRegistry.STRATA.get(), "from_cobblestone", Tags.Items.COBBLESTONE);
+        this.makeRecipe(SaltRegistry.STRATA.get(), "from_dirt", ItemTags.DIRT);
+        this.makeRecipe(SaltRegistry.STRATA.get(), "from_sand", ItemTags.SAND);
+        this.makeRecipe(SaltRegistry.STRATA.get(), "from_gravel", 1, Items.GRAVEL, 1, TIME);
+        this.makeRecipe(SaltRegistry.STRATA.get(), "from_clay", 4, Items.CLAY, 1, TIME);
+        this.makeRecipe(SaltRegistry.STRATA.get(), "from_clay_ball", 1, Items.CLAY_BALL, 1, TIME);
         this.makeRecipe(SaltRegistry.MINERAL.get(), "from_ores", Tags.Items.ORES);
+        this.makeRecipe(SaltRegistry.MINERAL.get(), "from_raw_materials", Tags.Items.RAW_MATERIALS);
         this.makeRecipe(SaltRegistry.MINERAL.get(), "from_ingots", 2, Tags.Items.INGOTS);
         this.makeRecipe(SaltRegistry.MINERAL.get(), "from_gems", 2, Tags.Items.GEMS);
         this.makeRecipe(SaltRegistry.CROPS.get(), "", Tags.Items.CROPS);
@@ -39,7 +50,7 @@ public class CalcinationRecipeProvider extends JsonRecipeProvider {
 
 
     public void makeRecipe(Item salt, String suffix, TagKey<Item> ingredient) {
-        this.makeRecipe(salt, suffix, 1, ingredient, TIME);
+        this.makeRecipe(salt, suffix, ingredient, TIME);
     }
 
     public void makeRecipe(Item salt, String suffix, TagKey<Item> ingredient, int calcinationTime) {
@@ -57,10 +68,10 @@ public class CalcinationRecipeProvider extends JsonRecipeProvider {
 
     public void makeRecipe(Item salt, String suffix, int resultCount, Item ingredient, int ingredientCount, int calcinationTime) {
         var name = this.name(salt).replace("alchemical_salt_", "");
-        if(suffix != null && !suffix.isEmpty())
+        if (suffix != null && !suffix.isEmpty())
             name += "_" + suffix;
 
-        var recipe =  this.makeRecipeJson(
+        var recipe = this.makeRecipeJson(
                 this.makeItemIngredient(this.locFor(ingredient)), ingredientCount,
                 this.makeItemResult(this.locFor(salt), resultCount), calcinationTime);
 
@@ -73,10 +84,10 @@ public class CalcinationRecipeProvider extends JsonRecipeProvider {
 
     public void makeRecipe(Item salt, String suffix, int resultCount, TagKey<Item> ingredient, int ingredientCount, int calcinationTime) {
         var name = this.name(salt).replace("alchemical_salt_", "");
-        if(suffix != null && !suffix.isEmpty())
+        if (suffix != null && !suffix.isEmpty())
             name += "_" + suffix;
 
-        var recipe =  this.makeRecipeJson(
+        var recipe = this.makeRecipeJson(
                 this.makeTagIngredient(this.locFor(ingredient)), ingredientCount,
                 this.makeItemResult(this.locFor(salt), resultCount), calcinationTime);
 
@@ -87,7 +98,7 @@ public class CalcinationRecipeProvider extends JsonRecipeProvider {
         this.recipeConsumer.accept(
                 this.modLoc(name),
                 recipe
-              );
+        );
 
     }
 

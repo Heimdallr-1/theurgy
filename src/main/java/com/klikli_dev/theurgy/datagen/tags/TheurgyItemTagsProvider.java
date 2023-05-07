@@ -12,6 +12,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -101,7 +102,6 @@ public class TheurgyItemTagsProvider extends ItemTagsProvider {
                 .addOptionalTag(this.rl("forge:raw_materials/lead"))
                 .addOptionalTag(this.rl("forge:raw_materials/tin"))
                 .addOptionalTag(this.rl("forge:raw_materials/cinnabar"))
-
         ;
 
         this.tag(ItemTagRegistry.MEDIUM_MERCURY_RAW_MATERIALS)
@@ -118,7 +118,6 @@ public class TheurgyItemTagsProvider extends ItemTagsProvider {
                 .addOptionalTag(this.rl("forge:raw_materials/allthemodium"))
                 .addOptionalTag(this.rl("forge:raw_materials/unobtainium"))
                 .addOptionalTag(this.rl("forge:raw_materials/vibranium"))
-
         ;
     }
 

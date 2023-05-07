@@ -65,7 +65,7 @@ public class SaltRegistry {
                     .forEach(sulfur -> {
                         calcinationRecipes.stream()
                                 .filter(recipe -> recipe.getResultItem(level.registryAccess()) != null && recipe.getResultItem(level.registryAccess()).getItem() == sulfur)
-                                .forEach(recipe -> event.accept(recipe.getResultItem(level.registryAccess()).copy()));
+                                .forEach(recipe -> event.accept(recipe.getResultItem(level.registryAccess()).copyWithCount(1)));
                     });
         }
     }
