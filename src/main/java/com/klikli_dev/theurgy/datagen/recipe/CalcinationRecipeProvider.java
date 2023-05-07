@@ -29,9 +29,10 @@ public class CalcinationRecipeProvider extends JsonRecipeProvider {
 
     @Override
     void buildRecipes(BiConsumer<ResourceLocation, JsonObject> recipeConsumer) {
-        this.makeRecipe(SaltRegistry.ORE.get(), Tags.Items.ORES);
-        this.makeRecipe(SaltRegistry.INGOT.get(), Tags.Items.INGOTS);
-        this.makeRecipe(SaltRegistry.CROPS.get(), Tags.Items.CROPS);
+        this.makeRecipe(SaltRegistry.MINERAL.get(), "from_ores", Tags.Items.ORES);
+        this.makeRecipe(SaltRegistry.MINERAL.get(), "from_ingots", 2, Tags.Items.INGOTS);
+        this.makeRecipe(SaltRegistry.MINERAL.get(), "from_gems", 2, Tags.Items.GEMS);
+        this.makeRecipe(SaltRegistry.CROPS.get(), "", Tags.Items.CROPS);
     }
 
     public void makeRecipe(String saltName, Item ingredient) {
@@ -69,18 +70,25 @@ public class CalcinationRecipeProvider extends JsonRecipeProvider {
 
     }
 
-    public void makeRecipe(Item salt, TagKey<Item> ingredient) {
-        this.makeRecipe(salt, 1, ingredient, TIME);
+    public void makeRecipe(Item salt, String suffix, TagKey<Item> ingredient) {
+        this.makeRecipe(salt, suffix, 1, ingredient, TIME);
     }
 
 
-    public void makeRecipe(Item salt, TagKey<Item> ingredient, int calcinationTime) {
-        this.makeRecipe(salt, 1, ingredient, calcinationTime);
+    public void makeRecipe(Item salt, String suffix, TagKey<Item> ingredient, int calcinationTime) {
+        this.makeRecipe(salt, suffix, 1, ingredient, calcinationTime);
     }
 
-    public void makeRecipe(Item salt, int resultCount, TagKey<Item> ingredient, int calcinationTime) {
+    public void makeRecipe(Item salt, String suffix, int resultCount, TagKey<Item> ingredient) {
+        this.makeRecipe(salt, suffix, resultCount, ingredient, TIME);
+    }
+
+    public void makeRecipe(Item salt, String suffix, int resultCount, TagKey<Item> ingredient, int calcinationTime) {
+        var name = this.name(salt).replace("alchemical_salt_", "");
+        if(suffix != null && !suffix.isEmpty())
+            name += "_" + suffix;
         this.recipeConsumer.accept(
-                this.modLoc(this.name(salt).replace("alchemical_salt_", "")),
+                this.modLoc(name),
                 this.makeRecipeJson(
                         this.makeTagIngredient(this.locFor(ingredient)),
                         this.makeItemResult(this.locFor(salt), resultCount), calcinationTime));

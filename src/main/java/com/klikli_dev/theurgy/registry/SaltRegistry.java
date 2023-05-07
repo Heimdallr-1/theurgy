@@ -20,11 +20,13 @@ import java.util.function.Supplier;
 public class SaltRegistry {
     public static final DeferredRegister<Item> SALTS = DeferredRegister.create(ForgeRegistries.ITEMS, Theurgy.MODID);
 
-    public static final RegistryObject<AlchemicalSaltItem> ORE =
-            register("ore");
-
-    public static final RegistryObject<AlchemicalSaltItem> INGOT =
-            register("ingot");
+    /**
+     * Geological term for sedimentary, rock, soil, etc. Here means Stone, Dirt, Sand, Gravel, Clay, etc
+     */
+    public static final RegistryObject<AlchemicalSaltItem> STRATA =
+            register("strata");
+    public static final RegistryObject<AlchemicalSaltItem> MINERAL =
+            register("mineral");
 
     public static final RegistryObject<AlchemicalSaltItem> CROPS =
             register("crops");
