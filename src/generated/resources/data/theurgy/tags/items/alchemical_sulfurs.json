@@ -32,6 +32,25 @@
     "theurgy:alchemical_sulfur_sapphire_ore",
     "theurgy:alchemical_sulfur_redstone_ore",
     "theurgy:alchemical_sulfur_coal_ore",
-    "theurgy:alchemical_sulfur_sulfur_ore"
+    "theurgy:alchemical_sulfur_sulfur_ore",
+    "theurgy:alchemical_sulfur_iron_raw",
+    "theurgy:alchemical_sulfur_copper_raw",
+    "theurgy:alchemical_sulfur_gold_raw",
+    "theurgy:alchemical_sulfur_netherite_raw",
+    "theurgy:alchemical_sulfur_uranium_raw",
+    "theurgy:alchemical_sulfur_azure_silver_raw",
+    "theurgy:alchemical_sulfur_silver_raw",
+    "theurgy:alchemical_sulfur_zinc_raw",
+    "theurgy:alchemical_sulfur_osmium_raw",
+    "theurgy:alchemical_sulfur_nickel_raw",
+    "theurgy:alchemical_sulfur_lead_raw",
+    "theurgy:alchemical_sulfur_allthemodium_raw",
+    "theurgy:alchemical_sulfur_unobtainium_raw",
+    "theurgy:alchemical_sulfur_iridium_raw",
+    "theurgy:alchemical_sulfur_tin_raw",
+    "theurgy:alchemical_sulfur_cinnabar_raw",
+    "theurgy:alchemical_sulfur_crimson_iron_raw",
+    "theurgy:alchemical_sulfur_platinum_raw",
+    "theurgy:alchemical_sulfur_vibranium_raw"
   ]
 }

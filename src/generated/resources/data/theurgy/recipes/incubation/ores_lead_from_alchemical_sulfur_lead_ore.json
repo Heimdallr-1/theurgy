@@ -5,7 +5,7 @@
       "type": "forge:not",
       "value": {
         "type": "forge:tag_empty",
-        "tag": "forge:ores/iron"
+        "tag": "forge:ores/lead"
       }
     }
   ],
@@ -15,12 +15,12 @@
   },
   "result": {
     "count": 1,
-    "tag": "forge:ores/iron"
+    "tag": "forge:ores/lead"
   },
   "salt": {
     "item": "theurgy:alchemical_salt_mineral"
   },
   "sulfur": {
-    "item": "theurgy:alchemical_sulfur_iron_ore"
+    "item": "theurgy:alchemical_sulfur_lead_ore"
   }
 }
