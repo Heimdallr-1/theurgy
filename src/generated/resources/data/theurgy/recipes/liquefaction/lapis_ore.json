@@ -14,7 +14,7 @@
   },
   "liquefaction_time": 200,
   "result": {
-    "count": 1,
+    "count": 10,
     "item": "theurgy:alchemical_sulfur_lapis_ore",
     "nbt": {
       "theurgy:sulfur.source.id": "#forge:ores/lapis"

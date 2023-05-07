@@ -1,5 +1,6 @@
-// 1.19.4	2023-05-07T10:15:23.9832741	Calcination Recipes
-1dca8dd075aef114b8a1f3a7fc08251db2f3bec4 data/theurgy/recipes/calcination/crops.json
-1e45dd66f01c02ab9d8f36f491b18eea6655f687 data/theurgy/recipes/calcination/mineral_from_gems.json
-801f0eac8025dabc8dd490c895ab83eaabe882bf data/theurgy/recipes/calcination/mineral_from_ingots.json
-b464c448252aeb383f9bb1af8d66289cba79f960 data/theurgy/recipes/calcination/mineral_from_ores.json
+// 1.19.4	2023-05-07T11:28:20.4107415	Calcination Recipes
+979613d40cc17ea73c00ce29998daace43bf19a2 data/theurgy/recipes/calcination/crops.json
+91ce7283a5d8bf210f825e1c7f3899c840caa238 data/theurgy/recipes/calcination/mineral.json
+2c2a45ef208781a281ba2aa635752a2f7471e871 data/theurgy/recipes/calcination/mineral_from_gems.json
+a5cbe077c2033e01d36194645de8d0bf1f6f2fe0 data/theurgy/recipes/calcination/mineral_from_ingots.json
+5ac554bb0c3be8407364b765cd681eb295ef3dc0 data/theurgy/recipes/calcination/mineral_from_ores.json
