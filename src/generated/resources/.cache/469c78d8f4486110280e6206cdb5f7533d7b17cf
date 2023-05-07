@@ -1,4 +1,4 @@
-// 1.19.4	2023-05-07T12:38:09.846484	Tags for minecraft:item mod id theurgy
+// 1.19.4	2023-05-07T18:07:49.2664306	Tags for minecraft:item mod id theurgy
 7a78325a639e879280cccf4d15f364e02da86003 data/forge/tags/items/gems.json
 9a414088a384ea8077655b79eb53ac263aaae5e3 data/forge/tags/items/gems/sal_ammoniac.json
 b119b915f2e2b16c4a5750a50453a2cfddf7235f data/forge/tags/items/high_mercury_ores.json
@@ -12,4 +12,4 @@ ba40677f5ca89c0a487417a60d1bb1fc6e20b837 data/forge/tags/items/low_mercury_raw_m
 f8295983ffdb0c42c6c8b12788a5b63c1eb43f72 data/forge/tags/items/ores_in_ground/stone.json
 c1ae367d1f7b1391996652acb8c12cfbe63abfc8 data/theurgy/tags/items/alchemical_mercuries.json
 07760e14b03fd0089485f8825e5961fedbd2ab80 data/theurgy/tags/items/alchemical_salts.json
-7e94dc17380ef93c46ec8e87a676dcd4c88b2e28 data/theurgy/tags/items/alchemical_sulfurs.json
+76f276b28ab00a9b0ed633df748ce7b9f55f1c09 data/theurgy/tags/items/alchemical_sulfurs.json

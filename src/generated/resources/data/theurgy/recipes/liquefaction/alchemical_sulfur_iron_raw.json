@@ -15,7 +15,7 @@
   "liquefaction_time": 200,
   "result": {
     "count": 2,
-    "item": "theurgy:alchemical_sulfur_iron",
+    "item": "theurgy:alchemical_sulfur_iron_raw",
     "nbt": {
       "theurgy:sulfur.source.id": "#forge:raw_materials/iron"
     }

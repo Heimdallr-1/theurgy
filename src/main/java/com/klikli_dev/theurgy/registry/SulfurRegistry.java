@@ -130,9 +130,6 @@ public class SulfurRegistry {
     public static final RegistryObject<AlchemicalSulfurItem> GOLD_RAW =
             register(raw("gold"), () -> new AlchemicalSulfurItem(new Item.Properties()));
 
-    public static final RegistryObject<AlchemicalSulfurItem> NETHERITE_RAW =
-            register(raw("netherite"), () -> new AlchemicalSulfurItem(new Item.Properties()));
-
     public static final RegistryObject<AlchemicalSulfurItem> URANIUM_RAW =
             register(raw("uranium"), () -> new AlchemicalSulfurItem(new Item.Properties()));
 
