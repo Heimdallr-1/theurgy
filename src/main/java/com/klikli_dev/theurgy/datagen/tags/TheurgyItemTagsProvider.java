@@ -12,7 +12,6 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -35,22 +34,46 @@ public class TheurgyItemTagsProvider extends ItemTagsProvider {
                 .add(ItemRegistry.SAL_AMMONIAC_CRYSTAL.get());
         this.tag(Tags.Items.GEMS).addTag(ItemTagRegistry.SAL_AMMONIAC_GEMS);
 
-        var mercuryTag = this.tag(ItemTagRegistry.ALCHEMICAL_MERCURIES);
+        var mercuriesTag = this.tag(ItemTagRegistry.ALCHEMICAL_MERCURIES);
         ItemRegistry.ITEMS.getEntries().forEach(item -> {
             //theoretically this loop is unnecessary, but allows us to apply additional logic in the future
             if (item.get() == ItemRegistry.MERCURY_SHARD.get() || item.get() == ItemRegistry.MERCURY_CRYSTAL.get())
-                mercuryTag.add(item.get());
+                mercuriesTag.add(item.get());
         });
 
-        var saltTag = this.tag(ItemTagRegistry.ALCHEMICAL_SALTS);
+        var saltsTag = this.tag(ItemTagRegistry.ALCHEMICAL_SALTS);
         SaltRegistry.SALTS.getEntries().forEach(salt -> {
-            saltTag.add(salt.get());
+            saltsTag.add(salt.get());
         });
 
-        var sulfurTag = this.tag(ItemTagRegistry.ALCHEMICAL_SULFURS);
+        var sulfursTag = this.tag(ItemTagRegistry.ALCHEMICAL_SULFURS);
         SulfurRegistry.SULFURS.getEntries().forEach(sulfur -> {
-            sulfurTag.add(sulfur.get());
+            sulfursTag.add(sulfur.get());
         });
+
+
+        //add the tier tags into the mai tag
+        this.tag(ItemTagRegistry.ALCHEMICAL_SULFURS_METALS)
+                .addOptionalTag(ItemTagRegistry.ALCHEMICAL_SULFURS_METALS_ABUNDANT.location())
+                .addOptionalTag(ItemTagRegistry.ALCHEMICAL_SULFURS_METALS_COMMON.location())
+                .addOptionalTag(ItemTagRegistry.ALCHEMICAL_SULFURS_METALS_RARE.location())
+                .addOptionalTag(ItemTagRegistry.ALCHEMICAL_SULFURS_METALS_PRECIOUS.location());
+
+        this.tag(ItemTagRegistry.ALCHEMICAL_SULFURS_GEMS)
+                .addOptionalTag(ItemTagRegistry.ALCHEMICAL_SULFURS_GEMS_ABUNDANT.location())
+                .addOptionalTag(ItemTagRegistry.ALCHEMICAL_SULFURS_GEMS_COMMON.location())
+                .addOptionalTag(ItemTagRegistry.ALCHEMICAL_SULFURS_GEMS_RARE.location())
+                .addOptionalTag(ItemTagRegistry.ALCHEMICAL_SULFURS_GEMS_PRECIOUS.location());
+
+        this.tag(ItemTagRegistry.ALCHEMICAL_SULFURS_OTHER_MINERALS)
+                .addOptionalTag(ItemTagRegistry.ALCHEMICAL_SULFURS_OTHER_MINERALS_ABUNDANT.location())
+                .addOptionalTag(ItemTagRegistry.ALCHEMICAL_SULFURS_OTHER_MINERALS_COMMON.location())
+                .addOptionalTag(ItemTagRegistry.ALCHEMICAL_SULFURS_OTHER_MINERALS_RARE.location())
+                .addOptionalTag(ItemTagRegistry.ALCHEMICAL_SULFURS_OTHER_MINERALS_PRECIOUS.location());
+
+        //TODO: Fill the tier tags
+
+
 
         this.tag(ItemTagRegistry.LOW_MERCURY_ORES)
                 .addTag(Tags.Items.ORES_IRON)
@@ -119,6 +142,7 @@ public class TheurgyItemTagsProvider extends ItemTagsProvider {
                 .addOptionalTag(this.rl("forge:raw_materials/unobtainium"))
                 .addOptionalTag(this.rl("forge:raw_materials/vibranium"))
         ;
+
     }
 
     public ResourceLocation rl(String tag) {
