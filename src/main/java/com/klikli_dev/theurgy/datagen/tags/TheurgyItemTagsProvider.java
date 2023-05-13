@@ -12,6 +12,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -72,7 +73,19 @@ public class TheurgyItemTagsProvider extends ItemTagsProvider {
                 .addOptionalTag(ItemTagRegistry.ALCHEMICAL_SULFURS_OTHER_MINERALS_PRECIOUS.location());
 
         //TODO: Fill the tier tags
+        this.tag(ItemTagRegistry.ALCHEMICAL_SULFURS_METALS_ABUNDANT)
+                .add(SulfurRegistry.COPPER.get())
+        ;
 
+        this.tag(ItemTagRegistry.ALCHEMICAL_SULFURS_METALS_COMMON)
+                .add(SulfurRegistry.IRON.get())
+                .add(SulfurRegistry.TIN.get())
+                .add(SulfurRegistry.ZINC.get())
+                .add(SulfurRegistry.LEAD.get())
+                .add(SulfurRegistry.NICKEL.get())
+                .add(SulfurRegistry.CINNABAR.get())
+                .add(SulfurRegistry.OSMIUM.get())
+        ;
 
 
         this.tag(ItemTagRegistry.LOW_MERCURY_ORES)
